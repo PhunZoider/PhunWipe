@@ -1,0 +1,16 @@
+Sandbox_EN = {
+    Sandbox_PhunWipe = "PhunWipe"
+
+    Sandbox_WipeKey = "Wipe Key"
+    Sandbox_WipeKey_tooltip = "If the player hasn't stored this key yet, it will reset their map"
+
+    Sandbox_WipePerCharacter = "Per Character"
+    Sandbox_WipePerCharacter_tooltip = "Wipes the map whenever the players character dies and they create a new one"
+
+    Sandbox_WipeMap = "Wipe Map"
+    Sandbox_WipeMap_tooltip = "Turn to false to skip erasure of the map"
+
+    Sandbox_WipeSymbols = "Wipe symbols"
+    Sandbox_WipeSymbols_tooltip = "Turn this off to skip erasure of symbols"
+
+}

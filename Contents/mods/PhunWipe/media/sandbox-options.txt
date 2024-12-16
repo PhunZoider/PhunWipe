@@ -1,0 +1,38 @@
+VERSION = 1,
+
+option PhunWipe.WipeMap
+{
+    type = boolean, 
+    default = true,
+    page=PhunWipe,
+    translation = PhunWipeWipeMap
+}
+
+option PhunWipe.WipeSymbols
+{
+    type = boolean, 
+    default = true,
+    page=PhunWipe,
+    translation = PhunWipeWipeSymbols
+}
+
+option PhunWipe.WipePerCharacter
+{
+    type = boolean, 
+    default = false,
+    page=PhunWipe,
+    translation = PhunWipePerCharacter
+}
+
+option PhunWipe.WipeKey
+{
+    type = string,
+    default = wipeKey,
+    page = PhunWipe,
+    translation = PhunWipeWipeKey
+}
+
+
+
+
+
