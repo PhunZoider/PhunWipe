@@ -4,7 +4,9 @@ function PW:wipeMap(player)
 
     if self.settings.WipeMap then
         print("PhunWipeL Wiping Players Map")
+        ISWorldMap.ShowWorldMap(player and player:getPlayerNum() or getPlayer())
         WorldMapVisited.getInstance():forget()
+        ISWorldMap.HideWorldMap(player and player:getPlayerNum() or getPlayer())
     end
     if self.settings.WipeSymbols then
         print("PhunWipe: Wiping Players Symbols")
