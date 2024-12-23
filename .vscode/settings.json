@@ -36,7 +36,7 @@
             },
             {
                 "match": ".*",
-                "cmd": "${env.USERPROFILE}\\Zomboid\\mods\\PhunWipe ${env.USERPROFILE}\\Zomboid\\Workshop\\PhunWipe /Y /I /E /F"
+                "cmd": "xcopy ${env.USERPROFILE}\\Zomboid\\mods\\PhunWipe ${env.USERPROFILE}\\Zomboid\\Workshop\\PhunWipe\\Contents\\mods\\PhunWipe /Y /I /E /F"
             },
         ]
     },
