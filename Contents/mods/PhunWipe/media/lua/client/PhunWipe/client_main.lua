@@ -4,16 +4,19 @@ function PW:wipeMap(player)
 
     if self.settings.WipeMap then
         print("PhunWipeL Wiping Players Map")
+
         ISWorldMap.ShowWorldMap(player and player:getPlayerNum() or getPlayer())
-        WorldMapVisited.getInstance():forget()
+        local wm = WorldMapVisited.getInstance()
+        wm:forget()
         ISWorldMap.HideWorldMap(player and player:getPlayerNum() or getPlayer())
     end
     if self.settings.WipeSymbols then
         print("PhunWipe: Wiping Players Symbols")
         ISWorldMap.ShowWorldMap(player and player:getPlayerNum() or getPlayer())
         local count = ISWorldMap_instance.mapAPI:getSymbolsAPI():getSymbolCount() - 1
+        local wm = ISWorldMap_instance
         for i = count, 1, -1 do
-            ISWorldMap_instance.mapAPI:getSymbolsAPI():removeSymbolByIndex(i)
+            wm.mapAPI:getSymbolsAPI():removeSymbolByIndex(i)
         end
         ISWorldMap.HideWorldMap(player and player:getPlayerNum() or getPlayer())
 
