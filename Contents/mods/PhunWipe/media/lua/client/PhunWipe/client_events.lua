@@ -1,4 +1,4 @@
-if not isClient() then
+if isServer() then
     return
 end
 
@@ -14,8 +14,17 @@ Events.OnPlayerDeath.Add(function(player)
     end
 end)
 
-Events.OnCreatePlayer.Add(function(player)
-    print("PhunWipe: OnCreatePlayer")
+local function setup()
+    Events.OnTick.Remove(setup)
     PW:ini()
-    PW:checkForWipe(player)
-end)
+    local players = PW:onlinePlayers()
+    for i = 1, players:size() do
+        local p = players:get(i - 1)
+        if p:isLocalPlayer() then
+            PW:checkForWipe(p)
+        end
+    end
+
+end
+
+Events.OnTick.Add(setup)
